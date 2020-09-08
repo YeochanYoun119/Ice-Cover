@@ -1,6 +1,5 @@
 # Ice-Cover
-This program retrives dates and durations of full-freeze ice covers of Mendota lake in Wisconsin from [Wisconsin State Climatology Office](http://www.aos.wisc.edu/~sco/lakes/Mendota-ice.html). From this data, implement a linear regression to calculate predicted ice-cover duration on Mendota in expected future year.
-
+This program retrieves dates and durations of full-freeze ice covers of Mendota lake in Wisconsin from [Wisconsin State Climatology Office](http://www.aos.wisc.edu/~sco/lakes/Mendota-ice.html). Based on this data, linear regression is implemented to calculate and predict the ice-cover duration for the future years of the Mendota lake.
 
 # Equation
 ## Linear Regression
@@ -26,10 +25,10 @@ Two betas represents the two arguments of the function.\
 ```
 
 ## gradient_descent(beta_0, beta_1):
-This fuction performs gradient descent on the MSE. At the current parameter(beta_0, beta_1), the gradient is defined by the vector of partial deravatives.\
+This function performs gradient descent on the MSE. At the current parameter(beta_0, beta_1), the gradient is defined by the vector of partial derivatives.\
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\vartheta&space;MSE(\beta_{0},&space;\beta_{1})}{\vartheta\beta_{0}}=\frac{2}{n}\Sigma&space;_{i=1}^{n}\textrm(\beta_{0}&plus;\beta_{1}x_{i}-y_{i})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\vartheta&space;MSE(\beta_{0},&space;\beta_{1})}{\vartheta\beta_{0}}=\frac{2}{n}\Sigma&space;_{i=1}^{n}\textrm(\beta_{0}&plus;\beta_{1}x_{i}-y_{i})" title="\frac{\vartheta MSE(\beta_{0}, \beta_{1})}{\vartheta\beta_{0}}=\frac{2}{n}\Sigma _{i=1}^{n}\textrm(\beta_{0}+\beta_{1}x_{i}-y_{i})" /></a>\
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\vartheta&space;MSE(\beta_{0},&space;\beta_{1})}{\vartheta\beta_{1}}=\frac{2}{n}\Sigma&space;_{i=1}^{n}\textrm(\beta_{0}&plus;\beta_{1}x_{i}-y_{i})x_{i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\vartheta&space;MSE(\beta_{0},&space;\beta_{1})}{\vartheta\beta_{1}}=\frac{2}{n}\Sigma&space;_{i=1}^{n}\textrm(\beta_{0}&plus;\beta_{1}x_{i}-y_{i})x_{i}" title="\frac{\vartheta MSE(\beta_{0}, \beta_{1})}{\vartheta\beta_{1}}=\frac{2}{n}\Sigma _{i=1}^{n}\textrm(\beta_{0}+\beta_{1}x_{i}-y_{i})x_{i}" /></a>\
-**retruns** teh corresponding gradient as a tuple with the partial derevative with respect to beta_0 as the first value.
+**retruns** the corresponding gradient as a tuple with the partial derivative with respect to beta_0 as the first value.
 
 ```
 >>> gradient_descent(0,0)
@@ -45,7 +44,7 @@ This fuction performs gradient descent on the MSE. At the current parameter(beta
 ```
 
 ## iterate_gradient(T, eta):
-This fuction calculates\
+This function calculates\
 <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_{0}^{(t)}=\beta_{0}^{(t-1)}-\eta&space;\frac{\vartheta&space;MSE(\beta_{0}^{(t-1)},&space;\beta_{1}^{(t-1)})}{\vartheta&space;\beta_{0}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_{0}^{(t)}=\beta_{0}^{(t-1)}-\eta&space;\frac{\vartheta&space;MSE(\beta_{0}^{(t-1)},&space;\beta_{1}^{(t-1)})}{\vartheta&space;\beta_{0}}" title="\beta_{0}^{(t)}=\beta_{0}^{(t-1)}-\eta \frac{\vartheta MSE(\beta_{0}^{(t-1)}, \beta_{1}^{(t-1)})}{\vartheta \beta_{0}}" /></a>\
 <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_{1}^{(t)}=\beta_{1}^{(t-1)}-\eta&space;\frac{\vartheta&space;MSE(\beta_{0}^{(t-1)},&space;\beta_{1}^{(t-1)})}{\vartheta&space;\beta_{1}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_{1}^{(t)}=\beta_{1}^{(t-1)}-\eta&space;\frac{\vartheta&space;MSE(\beta_{0}^{(t-1)},&space;\beta_{1}^{(t-1)})}{\vartheta&space;\beta_{1}}" title="\beta_{1}^{(t)}=\beta_{1}^{(t-1)}-\eta \frac{\vartheta MSE(\beta_{0}^{(t-1)}, \beta_{1}^{(t-1)})}{\vartheta \beta_{1}}" /></a>\
 parameter T is number of iterations to perform, eta is the prameter for the above calculations.\
