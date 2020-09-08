@@ -47,8 +47,8 @@ This function performs gradient descent on the MSE. At the current parameter(bet
 This function calculates\
 <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_{0}^{(t)}=\beta_{0}^{(t-1)}-\eta&space;\frac{\vartheta&space;MSE(\beta_{0}^{(t-1)},&space;\beta_{1}^{(t-1)})}{\vartheta&space;\beta_{0}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_{0}^{(t)}=\beta_{0}^{(t-1)}-\eta&space;\frac{\vartheta&space;MSE(\beta_{0}^{(t-1)},&space;\beta_{1}^{(t-1)})}{\vartheta&space;\beta_{0}}" title="\beta_{0}^{(t)}=\beta_{0}^{(t-1)}-\eta \frac{\vartheta MSE(\beta_{0}^{(t-1)}, \beta_{1}^{(t-1)})}{\vartheta \beta_{0}}" /></a>\
 <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_{1}^{(t)}=\beta_{1}^{(t-1)}-\eta&space;\frac{\vartheta&space;MSE(\beta_{0}^{(t-1)},&space;\beta_{1}^{(t-1)})}{\vartheta&space;\beta_{1}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_{1}^{(t)}=\beta_{1}^{(t-1)}-\eta&space;\frac{\vartheta&space;MSE(\beta_{0}^{(t-1)},&space;\beta_{1}^{(t-1)})}{\vartheta&space;\beta_{1}}" title="\beta_{1}^{(t)}=\beta_{1}^{(t-1)}-\eta \frac{\vartheta MSE(\beta_{0}^{(t-1)}, \beta_{1}^{(t-1)})}{\vartheta \beta_{1}}" /></a>\
-parameter T is number of iterations to perform, eta is the prameter for the above calculations.\
-Always begin from initial parameter (0,0)\
+parameter T is the number of iterations to perform, eta is the parameter for the above calculations.\
+Always begin from the initial parameter (0,0)\
 **prints** the followings:
 1. the current iteration number beginning at 1 and ending at T
 2. the current value of beta_0
