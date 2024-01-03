@@ -1,12 +1,3 @@
-'''
-Title:           Ice Cover Regression
-Files:           ice_cover.py
-Course:          CS540, Spring 2020
-
-Author:          Yeochan Youn
-Email:           yyoun5@wisc.edu
-'''
-
 import math
 import random
 
